@@ -1,0 +1,4 @@
+!mona modules
+--ntdll.dll
+!mona find -s "\xff\xe4" -m ntdll.dlll
+--77CAE871   FFE4             JMP ESP
