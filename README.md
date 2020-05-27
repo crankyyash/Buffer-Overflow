@@ -10,3 +10,4 @@ s.send("QUIT\r\n");
 
 Vulnerable dll : ntdll.dll
 ref : https://www.exploit-db.com/exploits/17546
+Download vulnerable application from exploit-db page
