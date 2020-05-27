@@ -1,4 +1,4 @@
-# Buffer-Overflow in Freefloat FTP Server 1.0 -'REST'
+# Buffer Overflow in Freefloat FTP Server 1.0 -'REST'
 
 POC ==>
 s.send("USER anonymous\r\n");
