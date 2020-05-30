@@ -29,3 +29,5 @@
 8. Final touches and running the exploit
 	Insert a random number of nops "\x90" ,preferably around 18, before the shellcode and after jmp esp address.
 	After rechecking the code , run it and wait for a reverse shell connection in another terminal nc -lvnp <attacking-port>
+
+NOTE : Dont forget AutoRunScript=post/windows/manage/migrate
